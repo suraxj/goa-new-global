@@ -15,5 +15,10 @@ foreach ($storageDirs as $dir) {
     }
 }
 
+// Set environment variables for serverless runtime
+$_ENV['APP_STORAGE'] = '/tmp/storage';
+$_SERVER['APP_STORAGE'] = '/tmp/storage';
+putenv('APP_STORAGE=/tmp/storage');
+
 // Forward Vercel request to Laravel public/index.php
 require __DIR__ . '/../public/index.php';

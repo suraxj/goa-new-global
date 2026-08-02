@@ -7,6 +7,10 @@
   },
   "routes": [
     {
+      "src": "/(web-assets|new-assets|admin-assets|css|js|favicon.ico|robots.txt)(.*)",
+      "dest": "/public/$1$2"
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
