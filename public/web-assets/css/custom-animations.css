@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GOA GLOBAL ACADEMY - PREMIUM DESIGN SYSTEM & ANIMATION EFFECTS
+   GOA GLOBAL ACADEMY - FULLY RESPONSIVE & DYNAMIC DESIGN SYSTEM
    ========================================================================== */
 
 :root {
@@ -25,10 +25,11 @@
   --shadow-premium: 0 20px 40px -15px rgba(79, 70, 229, 0.25);
 }
 
-/* Base Typography */
+/* Base Typography with Fluid Sizing */
 body {
   font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif !important;
   color: var(--slate-body);
+  overflow-x: hidden !important;
 }
 
 /* Gradient Text Shimmer Animation */
@@ -49,7 +50,7 @@ body {
 /* Floating Animations */
 @keyframes floatY {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
 }
 
 .gga-float {
@@ -64,7 +65,7 @@ body {
 .hero-premium {
   background: var(--gradient-hero) !important;
   color: #ffffff;
-  padding: 80px 0 60px;
+  padding: clamp(50px, 8vw, 90px) 0 clamp(40px, 6vw, 70px);
   position: relative;
   overflow: hidden;
 }
@@ -88,7 +89,7 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 24px;
-  padding: 30px;
+  padding: clamp(20px, 4vw, 32px);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
 }
 
@@ -109,9 +110,9 @@ body {
 /* Interactive Calculator Container */
 .interactive-calc-sec {
   background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
-  border-radius: 30px;
-  padding: 50px 30px;
-  margin: 60px 0;
+  border-radius: 24px;
+  padding: clamp(24px, 5vw, 50px) clamp(16px, 4vw, 36px);
+  margin: 40px 0;
   box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8), 0 20px 40px rgba(79, 70, 229, 0.08);
   border: 1px solid rgba(99, 102, 241, 0.15);
 }
@@ -137,7 +138,7 @@ body {
 .process-card-premium {
   background: #ffffff;
   border-radius: 20px;
-  padding: 30px 24px;
+  padding: 28px 20px;
   border: 1px solid rgba(226, 232, 240, 0.8);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
@@ -145,7 +146,7 @@ body {
 }
 
 .process-card-premium:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
   border-color: rgba(99, 102, 241, 0.4);
 }
@@ -162,32 +163,32 @@ body {
   margin-bottom: 15px;
 }
 
-/* FLOATING QUICK CONTACT BAR FIX: PREVENTS OVERLAPPING WITH SCROLL-TOP */
+/* FLOATING QUICK CONTACT BAR RESPONSIVE LAYOUT */
 .floating-contact-bar {
   position: fixed;
-  bottom: 115px;
-  right: 25px;
+  bottom: 110px;
+  right: 20px;
   z-index: 9990;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .scroll-top {
-  bottom: 35px !important;
-  right: 25px !important;
+  bottom: 30px !important;
+  right: 20px !important;
   z-index: 9995 !important;
 }
 
 .floating-btn {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff !important;
-  font-size: 22px;
+  font-size: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-decoration: none !important;
@@ -202,7 +203,7 @@ body {
 }
 
 .floating-btn:hover {
-  transform: scale(1.15) rotate(5deg);
+  transform: scale(1.12) rotate(4deg);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
 }
 
@@ -216,7 +217,7 @@ body {
 .holographic-card {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 16px;
   transition: all 0.5s ease;
 }
 
@@ -256,11 +257,11 @@ body {
   transform: rotate(-45deg) translateY(100%);
 }
 
-/* 3D FLIP CARD EFFECT */
+/* 3D FLIP CARD EFFECT - RESPONSIVE TOUCH SUPPORT */
 .flip-card-wrapper {
   width: 100%;
-  height: 260px;
-  margin: 1rem auto;
+  min-height: 250px;
+  margin: 0.5rem auto;
   perspective: 1000px;
   cursor: pointer;
 }
@@ -269,11 +270,14 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 250px;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
 
-.flip-card-wrapper:hover .card-inner {
+.flip-card-wrapper:hover .card-inner,
+.flip-card-wrapper:focus .card-inner,
+.flip-card-wrapper.flipped .card-inner {
   transform: rotateY(180deg);
 }
 
@@ -282,13 +286,15 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
+  min-height: 250px;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
-  padding: 25px;
+  padding: 24px 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -303,19 +309,12 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Pulse Keyframes */
-@keyframes pulseGlow {
-  0% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.8; }
-}
-
 /* Feature Badge Pill */
 .gga-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 18px;
+  padding: 6px 16px;
   background: rgba(79, 70, 229, 0.1);
   color: var(--primary-indigo);
   border-radius: 50px;
@@ -323,4 +322,37 @@ body {
   font-weight: 700;
   letter-spacing: 0.5px;
   border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+/* MEDIA QUERIES FOR SMALL SCREENS & MOBILE OPTIMIZATION */
+@media (max-width: 576px) {
+  .hero-premium h1 {
+    font-size: 1.9rem !important;
+  }
+  
+  .glass-form-card {
+    padding: 20px 16px !important;
+    border-radius: 18px !important;
+  }
+  
+  .floating-contact-bar {
+    bottom: 95px !important;
+    right: 14px !important;
+  }
+  
+  .scroll-top {
+    bottom: 25px !important;
+    right: 14px !important;
+  }
+
+  .floating-btn {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 18px !important;
+  }
+  
+  .interactive-calc-sec {
+    padding: 24px 14px !important;
+    border-radius: 18px !important;
+  }
 }
