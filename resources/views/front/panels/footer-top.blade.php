@@ -221,7 +221,9 @@
 
 
 <script>
-    SVGInject(document.querySelectorAll("img.injectable"));
+    if (typeof SVGInject !== 'undefined') {
+        SVGInject(document.querySelectorAll("img.injectable"));
+    }
 </script>
 {{-- @include('front.parts.pop') --}}
 <script>
