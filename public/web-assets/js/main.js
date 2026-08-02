@@ -628,40 +628,43 @@
                     };
                 1 == o && (i.scrollTrigger = { trigger: t, start: "top 85%" }), gsap.from(t, i);
             }),
-            t(".th--hover-item").length)
-    ) {
+    if (typeof hoverEffect !== 'undefined' && t(".th--hover-img").length && t(".th--hover-item").length) {
         let e = function (t, e) {
-            let a = new hoverEffect({
-                parent: t.get(0),
-                intensity: t.data("intensity") || void 0,
-                speedIn: t.data("speedin") || void 0,
-                speedOut: t.data("speedout") || void 0,
-                easing: t.data("easing") || void 0,
-                hover: t.data("hover") || void 0,
-                image1: e.eq(0).attr("src"),
-                image2: e.eq(0).attr("src"),
-                displacementImage: t.data("displacement"),
-                imagesRatio: e[0].height / e[0].width,
-                hover: !1,
-            });
-            t.closest(".th--hover-item")
-                .on("mouseenter", function () {
-                    a.next();
-                })
-                .on("mouseleave", function () {
-                    a.previous();
+            try {
+                let a = new hoverEffect({
+                    parent: t.get(0),
+                    intensity: t.data("intensity") || void 0,
+                    speedIn: t.data("speedin") || void 0,
+                    speedOut: t.data("speedout") || void 0,
+                    easing: t.data("easing") || void 0,
+                    hover: t.data("hover") || void 0,
+                    image1: e.eq(0).attr("src"),
+                    image2: e.eq(0).attr("src"),
+                    displacementImage: t.data("displacement"),
+                    imagesRatio: (e[0] && e[0].width) ? (e[0].height / e[0].width) : 1,
+                    hover: !1,
                 });
+                t.closest(".th--hover-item")
+                    .on("mouseenter", function () {
+                        if (a && a.next) a.next();
+                    })
+                    .on("mouseleave", function () {
+                        if (a && a.previous) a.previous();
+                    });
+            } catch (err) {}
         };
         (function () {
             t(".th--hover-img").each(function () {
                 let a = t(this),
                     n = a.find("img"),
                     o = n.eq(0);
-                o[0].complete
-                    ? e(a, n)
-                    : o.on("load", function () {
-                        e(a, n);
-                    });
+                if (o.length && o[0]) {
+                    o[0].complete
+                        ? e(a, n)
+                        : o.on("load", function () {
+                            e(a, n);
+                        });
+                }
             });
         })();
     }
