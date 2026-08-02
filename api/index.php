@@ -17,12 +17,23 @@ try {
     }
 
     // Set serverless environment variables
-    $_ENV['APP_STORAGE'] = '/tmp/storage';
-    $_SERVER['APP_STORAGE'] = '/tmp/storage';
-    $_ENV['VIEW_COMPILED_PATH'] = '/tmp/storage/framework/views';
-    $_SERVER['VIEW_COMPILED_PATH'] = '/tmp/storage/framework/views';
-    putenv('APP_STORAGE=/tmp/storage');
-    putenv('VIEW_COMPILED_PATH=/tmp/storage/framework/views');
+    $envOverrides = [
+        'APP_STORAGE' => '/tmp/storage',
+        'VIEW_COMPILED_PATH' => '/tmp/storage/framework/views',
+        // /var/task is read-only on Vercel; redirect Laravel's bootstrap
+        // manifest/cache writes to the writable /tmp bootstrap/cache dir.
+        'APP_PACKAGES_CACHE' => '/tmp/storage/bootstrap/cache/packages.php',
+        'APP_SERVICES_CACHE' => '/tmp/storage/bootstrap/cache/services.php',
+        'APP_CONFIG_CACHE' => '/tmp/storage/bootstrap/cache/config.php',
+        'APP_ROUTES_CACHE' => '/tmp/storage/bootstrap/cache/routes-v7.php',
+        'APP_EVENTS_CACHE' => '/tmp/storage/bootstrap/cache/events.php',
+    ];
+
+    foreach ($envOverrides as $key => $value) {
+        $_ENV[$key] = $value;
+        $_SERVER[$key] = $value;
+        putenv("$key=$value");
+    }
 
     // Load composer autoloader
     $autoload = __DIR__ . '/../vendor/autoload.php';
