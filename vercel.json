@@ -21,7 +21,7 @@
   "env": {
     "VERCEL": "1",
     "APP_ENV": "production",
-    "APP_DEBUG": "true",
+    "APP_DEBUG": "false",
     "APP_STORAGE": "/tmp/storage",
     "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
     "SESSION_DRIVER": "cookie",
