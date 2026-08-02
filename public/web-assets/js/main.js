@@ -628,9 +628,11 @@
                     };
                 1 == o && (i.scrollTrigger = { trigger: t, start: "top 85%" }), gsap.from(t, i);
             }),
-    if (typeof hoverEffect !== 'undefined' && t(".th--hover-img").length && t(".th--hover-item").length) {
+            t(".th--hover-item").length)
+    ) {
         let e = function (t, e) {
             try {
+                if (typeof hoverEffect === 'undefined') return;
                 let a = new hoverEffect({
                     parent: t.get(0),
                     intensity: t.data("intensity") || void 0,
@@ -658,13 +660,11 @@
                 let a = t(this),
                     n = a.find("img"),
                     o = n.eq(0);
-                if (o.length && o[0]) {
-                    o[0].complete
-                        ? e(a, n)
-                        : o.on("load", function () {
-                            e(a, n);
-                        });
-                }
+                o[0].complete
+                    ? e(a, n)
+                    : o.on("load", function () {
+                        e(a, n);
+                    });
             });
         })();
     }
