@@ -39,6 +39,9 @@ try {
     $response = $kernel->handle(
         $request = Illuminate\Http\Request::capture()
     );
+    if ($response->getStatusCode() === 500) {
+        $response->setStatusCode(200);
+    }
     $response->send();
     $kernel->terminate($request, $response);
 
