@@ -4,7 +4,8 @@
     "api/index.php": {
       "runtime": "vercel-php@0.7.1",
       "memory": 1024,
-      "maxDuration": 15
+      "maxDuration": 15,
+      "excludeFiles": "{public,storage,tests,database,.git}/**"
     }
   },
   "routes": [
