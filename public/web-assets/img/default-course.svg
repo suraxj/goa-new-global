@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="50%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#4338ca" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  <circle cx="500" cy="80" r="150" fill="#38bdf8" opacity="0.1"/>
+  <circle cx="100" cy="320" r="120" fill="#818cf8" opacity="0.15"/>
+  
+  <g transform="translate(230, 110)">
+    <rect width="140" height="140" rx="28" fill="url(#accentGrad)" opacity="0.2"/>
+    <path d="M 70 30 L 115 52 L 70 74 L 25 52 Z" fill="#ffffff"/>
+    <path d="M 40 65 L 40 90 Q 70 105 100 90 L 100 65 Q 70 76 40 65 Z" fill="#38bdf8"/>
+  </g>
+  
+  <text x="300" y="290" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="26" fill="#ffffff" text-anchor="middle">
+    Goa Global Academy
+  </text>
+  <text x="300" y="325" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="16" fill="#94a3b8" text-anchor="middle">
+    Excellence in Distance Education
+  </text>
+</svg>

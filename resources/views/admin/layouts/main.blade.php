@@ -1,0 +1,10 @@
+@include('admin.panels.header-top') 
+@yield('styles')
+<!-- @yield('scripts-top')    -->
+@include('admin.panels.header-bottom') 
+@include('admin.panels.top-menu') 
+@include('admin.panels.menu') 
+@yield('content')
+@include('admin.panels.footer-top')     
+@yield('script')
+@include('admin.panels.footer-bottom')     

@@ -1,0 +1,12 @@
+@include('front.panels.header-top') 
+@yield('scripts')
+@yield('ld_schema')
+@yield('styles')
+<!-- @yield('scripts-top')    -->
+@include('front.panels.header-bottom')     
+@include('front.panels.menu') 
+@yield('content')
+@include('front.panels.footer-top') 
+@include('front.parts.job-opportunities')
+@yield('script')
+@include('front.panels.footer-bottom')     

