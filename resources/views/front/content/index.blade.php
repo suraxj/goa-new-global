@@ -123,20 +123,30 @@
 
             scrollElements.forEach(el => observer.observe(el));
 
-            // 3D MOUSE MOVE TILT EFFECT FOR CARDS
-            const tiltCards = document.querySelectorAll('.holographic-card, .process-card-premium, .service-card-3d, .counter-box-3d');
-            tiltCards.forEach(card => {
-                card.addEventListener('mousemove', function(e) {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left - rect.width / 2;
-                    const y = e.clientY - rect.top - rect.height / 2;
-                    const rotateX = (-y / rect.height) * 12;
-                    const rotateY = (x / rect.width) * 12;
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
-                });
+            // 3D MOUSE MOVE TILT EFFECT FOR CARDS (DESKTOP ONLY)
+            if (window.innerWidth > 991) {
+                const tiltCards = document.querySelectorAll('.holographic-card, .process-card-premium, .service-card-3d, .counter-box-3d');
+                tiltCards.forEach(card => {
+                    card.addEventListener('mousemove', function(e) {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        const rotateX = (-y / rect.height) * 12;
+                        const rotateY = (x / rect.width) * 12;
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px) scale(1.02)`;
+                    });
 
-                card.addEventListener('mouseleave', function() {
-                    card.style.transform = '';
+                    card.addEventListener('mouseleave', function() {
+                        card.style.transform = '';
+                    });
+                });
+            }
+
+            // MOBILE TOUCH CARD FLIP EVENT
+            const flipWrappers = document.querySelectorAll('.flip-card-wrapper');
+            flipWrappers.forEach(w => {
+                w.addEventListener('click', function() {
+                    w.classList.toggle('touch-flipped');
                 });
             });
         });
