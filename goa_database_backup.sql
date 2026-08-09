@@ -1,8 +1,6 @@
 -- Database Backup for 'goa'
 -- Created at 2026-08-09 11:56:44
 
-CREATE DATABASE IF NOT EXISTS `goa`;
-USE `goa`;
 SET FOREIGN_KEY_CHECKS = 0;
 
 DROP TABLE IF EXISTS `approvals`;
