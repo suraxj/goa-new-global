@@ -26,13 +26,25 @@ class LeadController extends Controller
     }
     public function store(Request $request)
     {
+        $contact = $request->input('contact') ?? $request->input('phone') ?? '9999999999';
+        $email = $request->input('email');
+        if (empty($email)) {
+            $email = strtolower(Str::slug($request->input('name') ?? 'enquiry')) . rand(100, 999) . '@lead.com';
+        }
+        $type = $request->input('type') ?? 'B2C';
+
+        $request->merge([
+            'contact' => $contact,
+            'email' => $email,
+            'type' => $type,
+        ]);
+
         $validated = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email',
             'contact' => 'required|string',
-            'cv' => 'mimes:pdf,jpeg,webp,png,jpg,gif,svg|max:10000',
+            'cv' => 'nullable|mimes:pdf,jpeg,webp,png,jpg,gif,svg|max:10000',
             'type' => 'required|string',
-
         ]);
 
         try {

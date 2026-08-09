@@ -82,11 +82,15 @@
 
                         <form action="{{ route('add_lead') }}" method="POST" class="leadForm">
                             @csrf
+                            <input type="hidden" name="type" value="HeroEnquiry">
                             <div class="mb-3">
                                 <input type="text" name="name" class="form-control" placeholder="Your Full Name *" required />
                             </div>
                             <div class="mb-3">
-                                <input type="tel" name="phone" class="form-control" placeholder="Mobile Number *" required />
+                                <input type="email" name="email" class="form-control" placeholder="Email Address *" required />
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" name="contact" class="form-control" placeholder="Mobile Phone Number *" required />
                             </div>
                             <div class="mb-3">
                                 <select name="course" class="form-select" required>

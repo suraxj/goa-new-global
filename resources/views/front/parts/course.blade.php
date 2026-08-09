@@ -15,7 +15,7 @@
         <!-- CATEGORY TABS -->
         <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
             @foreach ($categories as $index => $cat)
-                <button class="btn @if ($index == 0) btn-cyber-glow @else btn-outline-dark fw-bold rounded-pill px-4 py-2 @endif"
+                <button class="btn course-tab-btn @if ($index == 0) btn-cyber-glow @else btn-outline-dark fw-bold rounded-pill px-4 py-2 @endif"
                     data-bs-toggle="pill" data-bs-target="#cat{{ $cat->id }}" type="button" style="border-radius: 50px;">
                     {{ $cat->name }}
                 </button>

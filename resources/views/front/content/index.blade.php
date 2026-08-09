@@ -149,6 +149,12 @@
                     w.classList.toggle('touch-flipped');
                 });
             });
+
+            // COURSE CATEGORY TAB ACTIVE TOGGLE
+            $('.course-tab-btn').on('click', function() {
+                $('.course-tab-btn').removeClass('btn-cyber-glow').addClass('btn-outline-dark fw-bold rounded-pill px-4 py-2');
+                $(this).addClass('btn-cyber-glow').removeClass('btn-outline-dark');
+            });
         });
     </script>
 @endsection
