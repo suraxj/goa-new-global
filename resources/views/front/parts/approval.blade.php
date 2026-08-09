@@ -26,7 +26,7 @@
                  <div class="swiper-wrapper">
                      @foreach ($approvals as $approval)
                          <div class="swiper-slide">
-                             <a href="#" class="brand-box"><img src="/{{ $approval->image }}"
+                             <a href="#pop" data-bs-toggle="modal" data-bs-target="#pop" class="brand-box" title="{{ $approval->name }} Accreditation Details"><img src="/{{ $approval->image }}"
                                      alt="{{ $approval->name }}" onerror="this.onerror=null; this.src='/web-assets/img/default-course.svg';" /></a>
                          </div>
                      @endforeach

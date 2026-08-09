@@ -6,7 +6,7 @@
                 <i class="fas fa-route"></i> SIMPLE 4-STEP ADMISSION
             </span>
             <h2 class="sec-title mb-3">
-                <span class="gga-shimmer-text">How to Get Enrolled at Goa Global Academy</span>
+                <span class="gga-shimmer-text">How to Get Enrolled at Apex Horizon Institute</span>
             </h2>
             <p class="text-muted max-w-2xl mx-auto" style="max-width: 650px;">
                 Complete your admission seamlessly with personalized counsellor guidance and online document verification.

@@ -1,6 +1,6 @@
 @extends('front.layouts.main')
 @section('title', 'Privacy Policy')
-@section('description', 'Privacy Policy - Goa Correspondence College')
+@section('description', 'Privacy Policy - Apex Horizon Institute')
 
 @section('content')
 
@@ -47,7 +47,7 @@
                         </p>
                         <h6><i class="fas fa-file-alt me-2 text-primary"></i>Disclaimer</h6>
                         <p class="policy-text">
-                            Goa Correspondence College provides educational information for guidance purposes only. We do
+                            Apex Horizon Institute provides educational information for guidance purposes only. We do
                             not
                             issue certificates or conduct examinations on behalf of universities. All official academic
                             documents are managed by respective institutions.

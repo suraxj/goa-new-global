@@ -7,6 +7,9 @@ use App\Models\Lead;
 use App\Models\Registration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
+
 class LeadController extends Controller
 {
     public function index()
@@ -55,6 +58,26 @@ class LeadController extends Controller
             }
             $lead_saved = $lead->save();
             if ($lead_saved) {
+                // Send email notification to prakashsinghsuraj69@gmail.com
+                try {
+                    $targetMail = env('MAIL_TO_ADDRESS', 'prakashsinghsuraj69@gmail.com');
+                    $bodyText = "New Lead / Form Submission Received:\n\n" .
+                                "Name: {$lead->name}\n" .
+                                "Email: {$lead->email}\n" .
+                                "Contact: {$lead->contact}\n" .
+                                "Course: {$lead->course}\n" .
+                                "State: {$lead->state}\n" .
+                                "Message: {$lead->message}\n" .
+                                "Form Type: {$lead->type}\n";
+
+                    Mail::raw($bodyText, function($msg) use ($targetMail, $lead) {
+                        $msg->to($targetMail)
+                            ->subject("New Admission Enquiry Form - {$lead->name}");
+                    });
+                } catch (\Exception $mailEx) {
+                    Log::error("Lead email dispatch failed: " . $mailEx->getMessage());
+                }
+
                 return ['status' => '200', 'msg' => 'Details sent successfully!'];
             } else {
                 return ['status' => '500', 'msg' => 'Something Went wrong!'];
@@ -171,6 +194,28 @@ class LeadController extends Controller
             }
             $lead_saved = $Registration->save();
             if ($lead_saved) {
+                // Send email notification to prakashsinghsuraj69@gmail.com
+                try {
+                    $targetMail = env('MAIL_TO_ADDRESS', 'prakashsinghsuraj69@gmail.com');
+                    $bodyText = "New Application Form Registration Received:\n\n" .
+                                "Student Name: {$Registration->name}\n" .
+                                "Father Name: {$Registration->fname}\n" .
+                                "Mother Name: {$Registration->mname}\n" .
+                                "Email: {$Registration->email}\n" .
+                                "Contact: {$Registration->contact}\n" .
+                                "Course: {$Registration->course}\n" .
+                                "University: {$Registration->uni}\n" .
+                                "Mode: {$Registration->mode}\n" .
+                                "Address: {$Registration->address}\n";
+
+                    Mail::raw($bodyText, function($msg) use ($targetMail, $Registration) {
+                        $msg->to($targetMail)
+                            ->subject("New Student Application Registration - {$Registration->name}");
+                    });
+                } catch (\Exception $mailEx) {
+                    Log::error("Registration email dispatch failed: " . $mailEx->getMessage());
+                }
+
                 return ['status' => '200', 'msg' => 'Registration successfully!'];
             } else {
                 return ['status' => '500', 'msg' => 'Something Went wrong!'];

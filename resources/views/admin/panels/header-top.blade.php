@@ -10,12 +10,13 @@
 	<meta charset="UTF-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Admin </title>
+	<title>Admin Command Center | Apex Horizon Institute</title>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="/web-assets/img/logo.png" type="image/x-icon">
-
-	<!-- styles code -->
+	<link rel="icon" type="image/svg+xml" href="/web-assets/img/favicon-gga.svg">
+	<link rel="shortcut icon" href="/web-assets/img/favicons/favicon-96x96.png" type="image/png">
+	<link rel="apple-touch-icon" href="/web-assets/img/favicons/apple-icon-180x180.png">
+	<link rel="stylesheet" href="/web-assets/css/custom-animations.css">
 
 	<!-- Choices JS -->
 	<script src="/admin-assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>

@@ -1,70 +1,87 @@
-<section class="services__area-two pt-70 pb-60 serices" >
+<section class="py-5 overflow-hidden" id="services-sec" style="background: #f8fafc;">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <div class="section__title mb-60 mb-md-30 text-center">
-                  
-                    <h2 class="title text-white">OUR BEST SERVICES</h2>
-                </div>
-            </div>
+        <div class="title-area text-center mb-5">
+            <span class="gga-badge mb-2">
+                <i class="fas fa-cubes"></i> ACADEMIC EXCELLENCE
+            </span>
+            <h2 class="sec-title mb-3" style="font-size: clamp(2rem, 3.5vw, 2.6rem); font-weight: 800; color: #0f172a;">
+                Comprehensive Academic <span class="gga-shimmer-text">Support & Services</span>
+            </h2>
+            <p class="text-muted max-w-2xl mx-auto" style="max-width: 650px; font-size: 1.05rem;">
+                From top university admissions to PhD thesis guidance, online LMS access, and career placement support.
+            </p>
         </div>
-    </div>
-    <div class="container">
-        <div class="row gutter-60 justify-content-center">
+
+        <div class="row gy-4 justify-content-center">
+            <!-- Service 1 -->
             <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="services__item-two">
-                    <div class="services__item-top">
-                        <div class="services__icon-two">
-                            <i class="fa-solid fa-building-columns"></i>
-                        </div>
-                        <h2 class="title"><a href="">Admission in Top Universities</a></h2>
+                <div class="service-card-3d">
+                    <div class="service-icon-box">
+                        <i class="fas fa-university"></i>
                     </div>
-                    <div class="services__content-two">
-                        <ul class="services__item-list list-wrap">
-                            <li class="pb-10"><i class="flaticon-check"></i> Programs for Working professionals</li>
-                            <li class="pb-10"><i class="flaticon-check"></i>Programs for students </li>
-                            <li class="pb-10"><i class="flaticon-check"></i>Programs for non working </li>
-                        </ul>
-                    </div>
+                    <h3 style="font-weight: 800; color: #0f172a; font-size: 1.35rem;" class="mb-3">
+                        Admissions in Top Universities
+                    </h3>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2.5">
+                        <li class="d-flex align-items-center gap-2 text-dark font-weight-bold" style="font-size: 0.95rem;">
+                            <i class="fas fa-check-circle text-primary"></i> Working Professional Degree Programs
+                        </li>
+                        <li class="d-flex align-items-center gap-2 text-dark font-weight-bold" style="font-size: 0.95rem;">
+                            <i class="fas fa-check-circle text-primary"></i> Fast-Track Regular & Distance Admissions
+                        </li>
+                        <li class="d-flex align-items-center gap-2 text-dark font-weight-bold" style="font-size: 0.95rem;">
+                            <i class="fas fa-check-circle text-primary"></i> 100% UGC, AIU & DEB Accreditation
+                        </li>
+                    </ul>
                 </div>
             </div>
+
+            <!-- Service 2 -->
             <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="services__item-two">
-                    <div class="services__item-top">
-                        <div class="services__icon-two">
-                          <i class="fa-solid fa-globe"></i>
-                        </div>
-                        <h2 class="title"><a href="">Online & Offline Coaching</a></h2>
+                <div class="service-card-3d">
+                    <div class="service-icon-box" style="background: var(--gradient-emerald);">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <div class="services__content-two">
-                        <ul class="services__item-list list-wrap">
-                            <li class="pb-10"><i class="flaticon-check"></i>UG/PG program classes</li>
-                            <li class="pb-10"><i class="flaticon-check"></i>11th  & 12th classes </li>
-                            <li class="pb-10"><i class="flaticon-check"></i>Banks & other Jobs Programs </li>
-                            <li class="pb-10"><i class="flaticon-check"></i>Teaching Jobs Program
-                                (NET/PGT/TGT etc)</li>
-                                <li class="pb-10"><i class="flaticon-check"></i> All Entrance exams (CAT, CUET etc)  </li>
-                        </ul>
-                    </div>
+                    <h3 style="font-weight: 800; color: #0f172a; font-size: 1.35rem;" class="mb-3">
+                        Digital LMS & Live Coaching
+                    </h3>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2.5">
+                        <li class="d-flex align-items-center gap-2 text-dark font-weight-bold" style="font-size: 0.95rem;">
+                            <i class="fas fa-check-circle text-success"></i> 24/7 Live Recorded Lectures & Study Notes
+                        </li>
+                        <li class="d-flex align-items-center gap-2 text-dark font-weight-bold" style="font-size: 0.95rem;">
+                            <i class="fas fa-check-circle text-success"></i> UG / PG Specialization Support
+                        </li>
+                        <li class="d-flex align-items-center gap-2 text-dark font-weight-bold" style="font-size: 0.95rem;">
+                            <i class="fas fa-check-circle text-success"></i> 10th & 12th Open Schooling Preparation
+                        </li>
+                    </ul>
                 </div>
             </div>
+
+            <!-- Service 3 -->
             <div class="col-xl-4 col-lg-4 col-md-6">
-                <div class="services__item-two">
-                    <div class="services__item-top">
-                        <div class="services__icon-two">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                        </div>
-                        <h2 class="title"><a href="">All Academic Support </a></h2>
+                <div class="service-card-3d">
+                    <div class="service-icon-box" style="background: var(--gradient-accent);">
+                        <i class="fas fa-user-graduate"></i>
                     </div>
-                    <div class="services__content-two">
-                        <ul class="services__item-list list-wrap">
-                            <li class="pb-10"><i class="flaticon-check"></i>Career Counseling </li>
-                            <li class="pb-10"><i class="flaticon-check"></i>PHD Research work </li>
-                            <li class="pb-10"><i class="flaticon-check"></i>All Assignments/Projects/Viva work/Internship</li>
-                        </ul>
-                    </div>
+                    <h3 style="font-weight: 800; color: #0f172a; font-size: 1.35rem;" class="mb-3">
+                        End-to-End Academic Support
+                    </h3>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2.5">
+                        <li class="d-flex align-items-center gap-2 text-dark font-weight-bold" style="font-size: 0.95rem;">
+                            <i class="fas fa-check-circle text-warning"></i> 1-on-1 Personalized Career Counselling
+                        </li>
+                        <li class="d-flex align-items-center gap-2 text-dark font-weight-bold" style="font-size: 0.95rem;">
+                            <i class="fas fa-check-circle text-warning"></i> Project, Viva & Internship Assistance
+                        </li>
+                        <li class="d-flex align-items-center gap-2 text-dark font-weight-bold" style="font-size: 0.95rem;">
+                            <i class="fas fa-check-circle text-warning"></i> PhD Research & Publication Guidance
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
+

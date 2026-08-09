@@ -19,7 +19,7 @@
         <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
         <div class="th-menu-content">
             <div class="mobile-logo">
-                <a href="/"><img src="/web-assets/img/logo-gga.svg" alt="Goa Global Academy" style="height: 52px;" /></a>
+                <a href="/"><img src="/web-assets/img/logo-gga.svg" alt="Apex Horizon Institute" style="height: 52px;" /></a>
             </div>
             <div class="th-mobile-menu-bottom">
                 <form class="th-mobile-search" action="#">
@@ -39,32 +39,22 @@
                 </div>
                 <div class="contact-info-wrap">
                     <div class="contact-info">
-                        <i class="fa-regular fa-envelope"></i> <a href="mailto:{{ $setting->primary_email }}">
-                            {{ $setting->primary_email }}
+                        <i class="fa-regular fa-envelope"></i> <a href="mailto:{{ $setting->primary_email ?? 'admissions@apexhorizon.edu.in' }}">
+                            {{ $setting->primary_email ?? 'admissions@apexhorizon.edu.in' }}
                         </a>
                     </div>
                     <div class="contact-info">
-                        <i class="fa-regular fa-phone"></i><a href="tel:{{ $setting->primary_contact }}">
-                            {{ $setting->primary_contact }}
+                        <i class="fa-regular fa-phone"></i><a href="tel:{{ $setting->primary_contact ?? '+919881788888' }}">
+                            {{ $setting->primary_contact ?? '+91 98817 88888' }}
+                        </a>
                     </div>
                 </div>
                 <div class="th-social style4">
-                     @if ($setting->facebook)
-                                        <a href="{{ $setting->facebook }}" target="_blank"><i
-                                                class="fab fa-facebook-f"></i></a>
-                                    @endif
-                                    @if ($setting->twitter)
-                                        <a href="{{ $setting->twitter }}" target="_blank"><i
-                                                class="fab fa-twitter"></i></a>
-                                    @endif
-                                    @if ($setting->linkedin)
-                                        <a href="{{ $setting->linkedin }}" target="_blank"><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                    @endif
-                                    @if ($setting->instagram)
-                                        <a href="{{ $setting->instagram }}" target="_blank"><i
-                                                class="fab fa-instagram"></i></a>
-                                    @endif
+                    <a href="{{ $setting->facebook ?? '#' }}" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{ $setting->twitter ?? '#' }}" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="{{ $setting->linkedin ?? '#' }}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="{{ $setting->instagram ?? '#' }}" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="{{ $setting->youtube ?? '#' }}" title="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="th-mobile-menu">
@@ -72,9 +62,9 @@
                     <li class="menu-item-has-children">
                         <a href="/" class="active">Home</a>
                     </li>
-                    <li><a href="/about">About US</a></li>
+                    <li><a href="/about">About Us</a></li>
                     <li class="menu-item-has-children">
-                        <a href="">Courses</a>
+                        <a href="#course-sec">Courses</a>
                         <ul class="sub-menu">
                             @php
                                 $unis = DB::select('select name, slug from courses order by name asc limit 5');
@@ -85,7 +75,6 @@
                         </ul>
                     </li>
                     <li><a href="/blog">Blogs</a></li>
-
                     <li><a href="/contact">Contact Us</a></li>
                 </ul>
             </div>
@@ -100,45 +89,47 @@
                     <div class="header-links">
                         <ul class="header-left-wrap">
                             <li>
-                                <i class="fa-regular fa-phone"></i><a href="tel:{{ $setting->primary_contact }}">{{ $setting->primary_contact }}</a>
+                                <i class="fa-regular fa-phone"></i><a href="tel:{{ $setting->primary_contact ?? '+919881788888' }}">{{ $setting->primary_contact ?? '+91 98817 88888' }}</a>
                             </li>
                             <li>
-                                <i class="fa-regular fa-envelope"></i><a href="mailto:{{ $setting->primary_email }}">{{ $setting->primary_email }}</a>
+                                <i class="fa-regular fa-envelope"></i><a href="mailto:{{ $setting->primary_email ?? 'admissions@apexhorizon.edu.in' }}">{{ $setting->primary_email ?? 'admissions@apexhorizon.edu.in' }}</a>
                             </li>
-
                         </ul>
                     </div>
                 </div>
-                <div class="col-auto">
+                <div class="col-auto d-flex align-items-center gap-3">
                     <div class="header-links ps-0">
                         <ul>
-
                             <li>
                                 <div class="th-social">
-                                    @if ($setting->facebook)
-                                        <a href="{{ $setting->facebook }}" target="_blank"><i
-                                                class="fab fa-facebook-f"></i></a>
-                                    @endif
-                                    @if ($setting->twitter)
-                                        <a href="{{ $setting->twitter }}" target="_blank"><i
-                                                class="fab fa-twitter"></i></a>
-                                    @endif
-                                    @if ($setting->linkedin)
-                                        <a href="{{ $setting->linkedin }}" target="_blank"><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                    @endif
-                                    @if ($setting->instagram)
-                                        <a href="{{ $setting->instagram }}" target="_blank"><i
-                                                class="fab fa-instagram"></i></a>
-                                    @endif
+                                    <a href="{{ $setting->facebook ?? '#' }}" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="{{ $setting->twitter ?? '#' }}" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="{{ $setting->linkedin ?? '#' }}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="{{ $setting->instagram ?? '#' }}" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="{{ $setting->youtube ?? '#' }}" title="YouTube"><i class="fab fa-youtube"></i></a>
                                 </div>
                             </li>
                         </ul>
                     </div>
+                    <button type="button" id="themeToggleBtn" class="btn btn-sm btn-outline-light rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 34px; height: 34px;" title="Toggle Dark/Light Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeBtn = document.getElementById('themeToggleBtn');
+            if (themeBtn) {
+                themeBtn.addEventListener('click', function() {
+                    document.body.classList.toggle('dark-mode');
+                    const isDark = document.body.classList.contains('dark-mode');
+                    themeBtn.innerHTML = isDark ? '<i class="fas fa-sun text-warning"></i>' : '<i class="fas fa-moon"></i>';
+                });
+            }
+        });
+    </script>
     <div class="sticky-wrapper shadow">
         <div class="container">
             <div class="menu-area">
@@ -146,7 +137,7 @@
                     <div class="col-auto">
                         <div class="header-logo">
                             <a href="/">
-                                <img src="/web-assets/img/logo-gga.svg" alt="Goa Global Academy" class="img-fluid pb-1"
+                                <img src="/web-assets/img/logo-gga.svg" alt="Apex Horizon Institute" class="img-fluid pb-1"
                                     style="max-height: 65px;" onerror="this.onerror=null; this.src='/web-assets/img/logo-gga.svg';">
                             </a>
                         </div>

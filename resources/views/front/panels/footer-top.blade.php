@@ -14,12 +14,12 @@
                     <div class="widget footer-widget th_fade_anim" data-delay=".3">
                         <div class="th-widget-about">
                             <div class="about-logo mb-3">
-                                <a href="/"> <img src="/web-assets/img/logo-gga-white.svg" alt="Goa Global Academy"
+                                <a href="/"> <img src="/web-assets/img/logo-gga-white.svg" alt="Apex Horizon Institute"
                                         class="img-fluid" style="max-height: 60px;">
                                 </a>
                             </div>
                             <p class="about-text">
-                                Goa Global Academy offers premier flexible distance education & online degree programs, helping students and working professionals excel with worldwide recognition.
+                                Apex Horizon Institute offers premier flexible distance education & online degree programs, helping students and working professionals excel with worldwide recognition.
                             </p>
                             <a href="#" data-bs-toggle="modal" data-bs-target="#pop"
                                 class="th-btn style2 btn-sm">Registration Now<svg class="ms-2" width="16"
@@ -150,23 +150,11 @@
                                 </div>
                             </div>
                             <div class="th-social style2">
-
-                                @if ($setting->facebook)
-                                    <a href="{{ $setting->facebook }}" target="_blank"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                @endif
-                                @if ($setting->twitter)
-                                    <a href="{{ $setting->twitter }}" target="_blank"><i
-                                            class="fab fa-twitter"></i></a>
-                                @endif
-                                @if ($setting->linkedin)
-                                    <a href="{{ $setting->linkedin }}" target="_blank"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                @endif
-                                @if ($setting->instagram)
-                                    <a href="{{ $setting->instagram }}" target="_blank"><i
-                                            class="fab fa-instagram"></i></a>
-                                @endif
+                                <a href="{{ $setting->facebook ?? '#' }}" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="{{ $setting->twitter ?? '#' }}" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ $setting->linkedin ?? '#' }}" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="{{ $setting->instagram ?? '#' }}" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="{{ $setting->youtube ?? '#' }}" title="YouTube"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -179,9 +167,9 @@
             <div class="row gy-2 align-items-center">
                
                 <div class="col-lg-6">
-                    <p class="copyright-text">
-                        Copyright <i class="fal fa-copyright"></i> 2026
-                        <a href="index.html">GC College</a>, All rights reserved.
+                    <p class="copyright-text mb-0">
+                        Copyright <i class="fal fa-copyright"></i> {{ date('Y') }}
+                        <a href="/">Apex Horizon Institute</a>. All rights reserved. | Designed & Developed by <a href="https://suraxj-portfolio.vercel.app" target="_blank" class="text-white font-weight-bold" style="text-decoration: underline;">Suraj Prakash Singh</a>
                     </p>
                 </div>
 

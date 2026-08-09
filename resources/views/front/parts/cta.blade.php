@@ -14,7 +14,7 @@
                         <div>
                             <span class="text-warning fw-bold text-uppercase" style="letter-spacing: 1px; font-size: 0.85rem;">Have Questions?</span>
                             <h3 class="m-0 text-white font-weight-bold" style="font-size: 1.4rem;">
-                                Contact Admission Desk: <a href="mailto:{{ $setting->primary_email ?? 'info@goaedu.in' }}" style="color: #38bdf8; text-decoration: underline;">{{ $setting->primary_email ?? 'info@goaedu.in' }}</a>
+                                Contact Admission Desk: <a href="mailto:{{ $setting->primary_email ?? 'info@apexhorizon.edu.in' }}" style="color: #38bdf8; text-decoration: underline;">{{ $setting->primary_email ?? 'info@apexhorizon.edu.in' }}</a>
                             </h3>
                         </div>
                     </div>

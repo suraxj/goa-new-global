@@ -1,6 +1,6 @@
 @extends('front.layouts.main')
 @section('title', 'Privacy Policy')
-@section('description', 'Privacy Policy - Goa Correspondence College')
+@section('description', 'Privacy Policy - Apex Horizon Institute')
 
 @section('content')
 
@@ -33,7 +33,7 @@
 
                     <h6><i class="fas fa-lock me-2 text-primary"></i> Acceptance of Terms</h6>
                     <p class="policy-text">
-                        By accessing or using Goa Correspondence College services, you agree to follow all terms and conditions mentioned on this page.
+                        By accessing or using Apex Horizon Institute services, you agree to follow all terms and conditions mentioned on this page.
                     </p>
 
                     <h6><i class="fas fa-database me-2 text-primary"></i> Services Usage</h6>
@@ -48,7 +48,7 @@
 
                     <h6><i class="fas fa-file-alt me-2 text-primary"></i> Admission Disclaimer</h6>
                     <p class="policy-text">
-                        Goa Correspondence College only provides guidance and support for admissions; final approval and certification are the responsibility of respective universities.
+                        Apex Horizon Institute only provides guidance and support for admissions; final approval and certification are the responsibility of respective universities.
                     </p>
 
                     <h6><i class="fas fa-external-link-alt me-2 text-primary"></i> Modifications</h6>

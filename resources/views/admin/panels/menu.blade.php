@@ -4,7 +4,7 @@ $setting = DB::table('site_settings')->first();
 <aside class="app-sidebar sticky" id="sidebar">
     <div class="main-sidebar-header">
         <a href="/dashboard" class="header-logo">
-            <img src="/{{$setting->logo}}" alt="logo" width="80" class="img-fluid">
+            <img src="/{{$setting->logo ?? 'web-assets/img/logo-gga.svg'}}" alt="Apex Horizon Institute Logo" style="max-height: 50px;" class="img-fluid" onerror="this.onerror=null; this.src='/web-assets/img/logo-gga.svg';">
         </a>
     </div>
     <div class="main-sidebar" id="sidebar-scroll">

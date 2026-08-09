@@ -6,7 +6,7 @@
                 <i class="fas fa-magic"></i> HOVER TO REVEAL BENEFITS
             </span>
             <h2 class="sec-title mb-3">
-                <span class="gga-shimmer-text">Why Students Choose Goa Global Academy</span>
+                <span class="gga-shimmer-text">Why Students Choose Apex Horizon Institute</span>
             </h2>
             <p class="text-muted max-w-2xl mx-auto" style="max-width: 650px;">
                 Hover over the 3D cards below to discover our key educational advantages and academic guarantees.
@@ -94,7 +94,7 @@
                         <div class="card-back text-center" style="background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);">
                             <h4 class="text-white font-weight-bold mb-2">Flexible Exam Dates</h4>
                             <p style="font-size: 0.88rem; line-height: 1.5;" class="mb-3">
-                                Option to choose online proctored exams or Goa exam center slots according to your schedule.
+                                Option to choose online proctored exams or National exam center slots according to your schedule.
                             </p>
                             <a href="#pop" data-bs-toggle="modal" data-bs-target="#pop" class="btn btn-sm btn-light fw-bold rounded-pill">Check Dates</a>
                         </div>

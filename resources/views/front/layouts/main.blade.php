@@ -6,6 +6,7 @@
 @include('front.panels.header-bottom')     
 @include('front.panels.menu') 
 @yield('content')
+@include('front.parts.developer-widgets')
 @include('front.panels.footer-top') 
 @include('front.parts.job-opportunities')
 @yield('script')

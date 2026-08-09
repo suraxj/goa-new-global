@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>@yield('title') | Goa Global Academy of Higher Education</title>
-    <meta name="author" content="Goa Global Academy" />
+    <title>@yield('title') | Apex Horizon Institute of Higher Education</title>
+    <meta name="author" content="Suraj Prakash Singh" />
+    <meta name="developer" content="Suraj Prakash Singh" />
+    <meta name="designer" content="Suraj Prakash Singh" />
     <meta name="description" content="@yield('description')">
-    <meta name="keywords" content="Goa Global Academy, Distance Education, Correspondence College, Degree Courses, Diploma" />
+    <meta name="keywords" content="Apex Horizon Institute, Distance Education, Online College, Degree Courses, Diploma" />
     <meta name="robots" content="INDEX,FOLLOW" />
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
     <link rel="icon" type="image/svg+xml" href="/web-assets/img/favicon-gga.svg" />
