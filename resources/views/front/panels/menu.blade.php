@@ -145,28 +145,24 @@
                     <div class="col-auto">
                         <nav class="main-menu d-none d-lg-inline-block">
                             <ul>
-                                <li class="active">
-                                    <a href="/">Home</a>
-
-                                </li>
-                                <li><a href="/about">About us</a> </li>
+                                <li class="active"><a href="/">Home</a></li>
+                                <li><a href="/about">About Us</a></li>
                                 <li class="menu-item-has-children">
-                                    <a href="#">Courses</a>
+                                    <a href="#course-sec">Courses</a>
                                     <ul class="sub-menu">
-                                        @foreach ($categories as $cat)
-                                            <li><a href="/courses/{{ $cat->slug }}">{{ $cat->name }}
-                                                    Courses</a></li>
+                                        @php
+                                            $navCourses = DB::select('select name, slug from courses order by name asc limit 6');
+                                        @endphp
+                                        @foreach ($navCourses as $nCourse)
+                                            <li><a href="/course/{{ $nCourse->slug }}">{{ $nCourse->name }}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>
-
-                                <li><a href="/blog">Blog</a></li>
-
-
-                                <li><a href="/contact">contact us</a></li>
+                                <li><a href="/blog">Blogs</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
                             </ul>
                         </nav>
-                        <button type="button" class="th-menu-toggle d-block d-lg-none">
+                        <button type="button" class="th-menu-toggle d-block d-lg-none" aria-label="Toggle Navigation Menu">
                             <i class="fal fa-bars"></i>
                         </button>
                     </div>
