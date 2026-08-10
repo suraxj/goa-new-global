@@ -36,11 +36,11 @@ class SiteSettingController extends Controller
                 $site->secondary_email = $request['secondary_email'];
                 $site->primary_address = $request['primary_address'];
                 $site->secondary_address = $request['secondary_address'];
-                $site->facebook = $request['facebook'];
-                $site->instagram = $request['instagram'];
-                $site->twitter = $request['twitter'];
-                $site->linkedin = $request['linked_in'];
-                $site->youtube = $request['youtube'];
+                $site->facebook = '#';
+                $site->instagram = '#';
+                $site->twitter = '#';
+                $site->linkedin = '#';
+                $site->youtube = '#';
                 if ($request->file('logo')) {
                     $file = $request->file('logo');
                     $name = 'carrerloverinstitute' . '_logo' . '.' . $file->getClientOriginalExtension();
@@ -79,11 +79,11 @@ class SiteSettingController extends Controller
                 $u_site->secondary_email = $request['secondary_email'];
                 $u_site->primary_address = $request['primary_address'];
                 $u_site->secondary_address = $request['secondary_address'];
-                $u_site->facebook = $request['facebook'];
-                $u_site->instagram = $request['instagram'];
-                $u_site->twitter = $request['twitter'];
-                $u_site->linkedin = $request['linked_in'];
-                $u_site->youtube = $request['youtube'];
+                $u_site->facebook = '#';
+                $u_site->instagram = '#';
+                $u_site->twitter = '#';
+                $u_site->linkedin = '#';
+                $u_site->youtube = '#';
                 if ($request->file('logo')) {
                     $file = $request->file('logo');
                     $old = $u_site->logo;

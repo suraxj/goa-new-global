@@ -58,23 +58,23 @@
                                 </div>
                                 <div class="form-group mb-3 col-md-6">
                                     <label for="facebook">Facebook (Optional):</label>
-                                    <input class="form-control" name="facebook" value="{{isset($sitesetting->facebook) ? $sitesetting->facebook : ''}}" placeholder="Enter facebook link">
+                                    <input class="form-control" name="facebook" value="#" placeholder="Enter facebook link">
                                 </div>
                                 <div class="form-group mb-3 col-md-6">
-                                    <label for="twitter">youtube (Optional):</label>
-                                    <input class="form-control" name="twitter" id="twitter" value="{{isset($sitesetting->twitter) ? $sitesetting->twitter : ''}}" placeholder="Enter youtube link">
+                                    <label for="twitter">Twitter / X (Optional):</label>
+                                    <input class="form-control" name="twitter" id="twitter" value="#" placeholder="Enter twitter link">
                                 </div>
                                 <div class="form-group mb-3 col-md-6">
                                     <label for="linked_in">LinkedIn (Optional):</label>
-                                    <input class="form-control" name="linked_in" id="linked_in" value="{{isset($sitesetting->linkedin) ? $sitesetting->linkedin : ''}}" placeholder="Enter linkedIn profile link">
+                                    <input class="form-control" name="linked_in" id="linked_in" value="#" placeholder="Enter linkedIn profile link">
                                 </div>
                                 <div class="form-group mb-3 col-md-6">
                                     <label for="instagram">Instagram (Optional):</label>
-                                    <input class="form-control" name="instagram" id="instagram" value="{{isset($sitesetting->instagram) ? $sitesetting->instagram : ''}}" placeholder="Enter instagram profile link">
+                                    <input class="form-control" name="instagram" id="instagram" value="#" placeholder="Enter instagram profile link">
                                 </div>
                                 <div class="form-group mb-3 col-md-6">
-                                    <label for="youtube">twitter (Optional):</label>
-                                    <input class="form-control" name="youtube" id="youtube" value="{{isset($sitesetting->youtube) ? $sitesetting->youtube : ''}}" placeholder="Enter youTube profile link">
+                                    <label for="youtube">YouTube (Optional):</label>
+                                    <input class="form-control" name="youtube" id="youtube" value="#" placeholder="Enter youTube profile link">
                                 </div>
                                 <div class="col-md-12 text-right">
                                     <button class="btn btn-primary" type="submit">Save</button>
